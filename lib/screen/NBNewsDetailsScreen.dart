@@ -2,9 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:newsblog_prokit/main.dart';
 import 'package:newsblog_prokit/model/NBModel.dart';
-import 'package:newsblog_prokit/screen/NBCommentScreen.dart';
 import 'package:newsblog_prokit/utils/NBColors.dart';
-import 'package:newsblog_prokit/utils/NBImages.dart';
+// import 'package:newsblog_prokit/utils/NBImages.dart';
 import 'package:newsblog_prokit/utils/NBWidgets.dart';
 
 class NBNewsDetailsScreen extends StatefulWidget {
@@ -61,31 +60,6 @@ class NBNewsDetailsScreenState extends State<NBNewsDetailsScreen> {
                 Text('${widget.newsDetails!.title}',
                         style: boldTextStyle(size: 20))
                     .expand(flex: 3),
-                widget.newsDetails!.isBookmark
-                    ? IconButton(
-                        icon: Icon(Icons.bookmark),
-                        onPressed: () {
-                          setState(
-                            () {
-                              widget.newsDetails!.isBookmark =
-                                  !widget.newsDetails!.isBookmark;
-                            },
-                          );
-                          toasty(context, 'Removed from Bookmark');
-                        },
-                      )
-                    : IconButton(
-                        icon: Icon(Icons.bookmark_border),
-                        onPressed: () {
-                          setState(
-                            () {
-                              widget.newsDetails!.isBookmark =
-                                  !widget.newsDetails!.isBookmark;
-                            },
-                          );
-                          toasty(context, 'Added to Bookmark');
-                        },
-                      ),
               ],
             ),
             16.height,
@@ -120,14 +94,28 @@ class NBNewsDetailsScreenState extends State<NBNewsDetailsScreen> {
             Text('${widget.newsDetails!.details}',
                 style: primaryTextStyle(), textAlign: TextAlign.justify),
             16.height,
-            nbAppButtonWidget(
-              context,
-              'Comment',
-              () {
-                NBCommentScreen(widget.newsDetails).launch(context);
-              },
+            ExpansionTile(
+              title: Text("FAQ QUESTION ONE"), //header title
+              children: [
+                Container(
+                  color: Colors.black12,
+                  padding: EdgeInsets.all(20),
+                  width: double.infinity,
+                  child: Text("Answers for Question One"),
+                )
+              ],
             ),
-            16.height,
+            ExpansionTile(
+              title: Text("FAQ QUESTION TWO"), //header title
+              children: [
+                Container(
+                  color: Colors.black12,
+                  padding: EdgeInsets.all(20),
+                  width: double.infinity,
+                  child: Text("Answers for Question Two"),
+                )
+              ],
+            ),
           ],
         ).paddingOnly(left: 16, right: 16),
       ),

@@ -1,0 +1,147 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.cepulovers.guideatoz"
+4    android:versionCode="3"
+5    android:versionName="1.0.2" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="31" />
+10    <!--
+11         Flutter needs it to communicate with the running application
+12         to allow setting breakpoints, to provide hot reload, etc.
+13    -->
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->/Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/android/app/src/main/AndroidManifest.xml:4:5-67
+14-->/Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/android/app/src/main/AndroidManifest.xml:4:22-64
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->/Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/android/app/src/main/AndroidManifest.xml:5:5-79
+15-->/Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/android/app/src/main/AndroidManifest.xml:5:22-76
+16    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+16-->/Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/android/app/src/main/AndroidManifest.xml:6:5-79
+16-->/Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/android/app/src/main/AndroidManifest.xml:6:22-76
+17    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+17-->/Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/android/app/src/main/AndroidManifest.xml:7:5-81
+17-->/Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/android/app/src/main/AndroidManifest.xml:7:22-78
+18    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+18-->/Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/android/app/src/main/AndroidManifest.xml:8:5-72
+18-->/Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/android/app/src/main/AndroidManifest.xml:8:22-69
+19    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+19-->/Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/android/app/src/main/AndroidManifest.xml:9:5-71
+19-->/Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/android/app/src/main/AndroidManifest.xml:9:22-68
+20    <uses-permission android:name="android.permission.BLUETOOTH" />
+20-->/Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/android/app/src/main/AndroidManifest.xml:10:5-67
+20-->/Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/android/app/src/main/AndroidManifest.xml:10:22-65
+21    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+21-->/Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/android/app/src/main/AndroidManifest.xml:11:5-73
+21-->/Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/android/app/src/main/AndroidManifest.xml:11:22-71
+22    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+22-->/Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/android/app/src/main/AndroidManifest.xml:12:5-75
+22-->/Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/android/app/src/main/AndroidManifest.xml:12:22-73
+23
+24    <application
+25        android:name="android.app.Application"
+26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+26-->[androidx.core:core:1.8.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/8e86e615f21ac3758e97e94e18045107/core-1.8.0/AndroidManifest.xml:24:18-86
+27        android:debuggable="true"
+28        android:icon="@mipmap/ic_launcher"
+29        android:label="Guide AtoZ" >
+30        <activity
+31            android:name="com.example.newsblog_prokit.MainActivity"
+32            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+33            android:exported="true"
+34            android:hardwareAccelerated="true"
+35            android:launchMode="singleTop"
+36            android:theme="@style/LaunchTheme"
+37            android:windowSoftInputMode="adjustResize" >
+38
+39            <!--
+40                 Specifies an Android theme to apply to this Activity as soon as
+41                 the Android process has started. This theme is visible to the user
+42                 while the Flutter UI initializes. After that, this theme continues
+43                 to determine the Window background behind the Flutter UI.
+44            -->
+45            <meta-data
+46                android:name="io.flutter.embedding.android.NormalTheme"
+47                android:resource="@style/NormalTheme" />
+48
+49            <intent-filter>
+50                <action android:name="android.intent.action.MAIN" />
+51
+52                <category android:name="android.intent.category.LAUNCHER" />
+53
+54                <action android:name="android.speech.RecognitionService" />
+55            </intent-filter>
+56        </activity>
+57        <!--
+58             Don't delete the meta-data below.
+59             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+60        -->
+61        <meta-data
+62            android:name="flutterEmbedding"
+63            android:value="2" />
+64
+65        <provider
+65-->[:image_picker_android] /Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-16:20
+66            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+66-->[:image_picker_android] /Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-82
+67            android:authorities="com.cepulovers.guideatoz.flutter.image_provider"
+67-->[:image_picker_android] /Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:10:13-74
+68            android:exported="false"
+68-->[:image_picker_android] /Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-37
+69            android:grantUriPermissions="true" >
+69-->[:image_picker_android] /Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:12:13-47
+70            <meta-data
+70-->[:image_picker_android] /Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-15:75
+71                android:name="android.support.FILE_PROVIDER_PATHS"
+71-->[:image_picker_android] /Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:14:17-67
+72                android:resource="@xml/flutter_image_picker_file_paths" />
+72-->[:image_picker_android] /Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/build/image_picker_android/intermediates/library_manifest/debug/AndroidManifest.xml:15:17-72
+73        </provider>
+74
+75        <activity
+75-->[:url_launcher_android] /Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/build/url_launcher_android/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-11:74
+76            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+76-->[:url_launcher_android] /Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/build/url_launcher_android/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-74
+77            android:exported="false"
+77-->[:url_launcher_android] /Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/build/url_launcher_android/intermediates/library_manifest/debug/AndroidManifest.xml:10:13-37
+78            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+78-->[:url_launcher_android] /Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/build/url_launcher_android/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-71
+79
+80        <uses-library
+80-->[androidx.window:window:1.0.0-beta04] /Users/macbook/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+81            android:name="androidx.window.extensions"
+81-->[androidx.window:window:1.0.0-beta04] /Users/macbook/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+82            android:required="false" />
+82-->[androidx.window:window:1.0.0-beta04] /Users/macbook/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+83        <uses-library
+83-->[androidx.window:window:1.0.0-beta04] /Users/macbook/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+84            android:name="androidx.window.sidecar"
+84-->[androidx.window:window:1.0.0-beta04] /Users/macbook/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+85            android:required="false" />
+85-->[androidx.window:window:1.0.0-beta04] /Users/macbook/.gradle/caches/transforms-2/files-2.1/03c633e46d75bfb21f082f0417f55161/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+86
+87        <provider
+87-->[androidx.emoji2:emoji2:1.0.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/8d120aa649c2aed370574c7028952cac/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+88            android:name="androidx.startup.InitializationProvider"
+88-->[androidx.emoji2:emoji2:1.0.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/8d120aa649c2aed370574c7028952cac/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
+89            android:authorities="com.cepulovers.guideatoz.androidx-startup"
+89-->[androidx.emoji2:emoji2:1.0.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/8d120aa649c2aed370574c7028952cac/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
+90            android:exported="false" >
+90-->[androidx.emoji2:emoji2:1.0.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/8d120aa649c2aed370574c7028952cac/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
+91            <meta-data
+91-->[androidx.emoji2:emoji2:1.0.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/8d120aa649c2aed370574c7028952cac/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+92                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+92-->[androidx.emoji2:emoji2:1.0.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/8d120aa649c2aed370574c7028952cac/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+93                android:value="androidx.startup" />
+93-->[androidx.emoji2:emoji2:1.0.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/8d120aa649c2aed370574c7028952cac/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+94            <meta-data
+94-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/2dd7e1e94a0e65810db6291100ebf315/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+95                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+95-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/2dd7e1e94a0e65810db6291100ebf315/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+96                android:value="androidx.startup" />
+96-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/macbook/.gradle/caches/transforms-2/files-2.1/2dd7e1e94a0e65810db6291100ebf315/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+97        </provider>
+98    </application>
+99
+100</manifest>

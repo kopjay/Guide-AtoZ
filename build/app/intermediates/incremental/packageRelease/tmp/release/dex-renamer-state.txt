@@ -1,0 +1,4 @@
+#Fri Nov 04 06:13:33 WIB 2022
+base.0=/Users/macbook/Downloads/Prokit_flutter_MainFile_SourceCode/full_apps/news_blog_prokit/newsblog_prokit/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

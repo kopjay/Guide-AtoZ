@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:newsblog_prokit/main.dart';
+import 'package:newsblog_prokit/screen/NBHomeScreen.dart';
 import 'package:newsblog_prokit/screen/NBWalkThroughScreen.dart';
 import 'package:newsblog_prokit/utils/NBImages.dart';
 
@@ -23,13 +24,14 @@ class NBSplashScreenState extends State<NBSplashScreen> {
   Future<void> init() async {
     setStatusBarColor(
       appStore.isDarkModeOn ? scaffoldDarkColor : white,
-      statusBarIconBrightness: appStore.isDarkModeOn ? Brightness.light : Brightness.dark,
+      statusBarIconBrightness:
+          appStore.isDarkModeOn ? Brightness.light : Brightness.dark,
     );
     Timer(
       Duration(seconds: 3),
       () {
         finish(context);
-        NBWalkThroughScreen().launch(context);
+        NBHomeScreen().launch(context);
       },
     );
   }

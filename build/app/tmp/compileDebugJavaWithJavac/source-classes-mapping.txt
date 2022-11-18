@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/example/newsblog_prokit/BuildConfig.java
+ com.example.newsblog_prokit.BuildConfig

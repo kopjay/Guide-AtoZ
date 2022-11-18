@@ -1,13 +1,6 @@
 import 'package:nb_utils/nb_utils.dart';
 import 'package:newsblog_prokit/model/NBModel.dart';
-import 'package:newsblog_prokit/screen/NBAudioArticleScreen.dart';
-import 'package:newsblog_prokit/screen/NBBookmarkScreen.dart';
-import 'package:newsblog_prokit/screen/NBChangePasswordScreen.dart';
-import 'package:newsblog_prokit/screen/NBCreateNewArticleScreen.dart';
 import 'package:newsblog_prokit/screen/NBEditProfileScreen.dart';
-import 'package:newsblog_prokit/screen/NBLanguageScreen.dart';
-import 'package:newsblog_prokit/screen/NBMembershipScreen.dart';
-import 'package:newsblog_prokit/screen/NBNotificationSettingScreen.dart';
 import 'package:newsblog_prokit/screen/NBSettingScreen.dart';
 import 'package:newsblog_prokit/utils/NBImages.dart';
 
@@ -33,23 +26,21 @@ String details =
 
 List<NBBannerItemModel> nbGetBannerItems() {
   List<NBBannerItemModel> bannerList = [];
-  bannerList.add(NBBannerItemModel(image: NBNewsImage1));
-  bannerList.add(NBBannerItemModel(image: NBNewsImage2));
-  bannerList.add(NBBannerItemModel(image: NBNewsImage3));
+  bannerList.add(NBBannerItemModel(image: NBTechNews1));
+  bannerList.add(NBBannerItemModel(image: NBTechNews2));
   return bannerList;
 }
 
 List<NBDrawerItemModel> nbGetDrawerItems() {
   List<NBDrawerItemModel> drawerItems = [];
   drawerItems.add(NBDrawerItemModel(title: 'Home'));
-  drawerItems
-      .add(NBDrawerItemModel(title: 'Audio', widget: NBAudioArticleScreen()));
+  drawerItems.add(NBDrawerItemModel(title: 'Audio', widget: NBSettingScreen()));
   drawerItems.add(NBDrawerItemModel(
-      title: 'Create New Article', widget: NBCreateNewArticleScreen()));
+      title: 'Create New Article', widget: NBSettingScreen()));
   drawerItems
-      .add(NBDrawerItemModel(title: 'Bookmark', widget: NBBookmarkScreen()));
-  drawerItems.add(
-      NBDrawerItemModel(title: 'Membership', widget: NBMembershipScreen()));
+      .add(NBDrawerItemModel(title: 'Bookmark', widget: NBSettingScreen()));
+  drawerItems
+      .add(NBDrawerItemModel(title: 'Membership', widget: NBSettingScreen()));
   drawerItems
       .add(NBDrawerItemModel(title: 'Setting', widget: NBSettingScreen()));
   return drawerItems;
@@ -133,13 +124,13 @@ List<NBNewsDetailsModel> nbGetNewsDetails() {
 List<NBSettingsItemModel> nbGetSettingItems() {
   List<NBSettingsItemModel> settingList = [];
   settingList
-      .add(NBSettingsItemModel(title: 'Language', widget: NBLanguageScreen()));
+      .add(NBSettingsItemModel(title: 'Language', widget: NBSettingScreen()));
   settingList.add(NBSettingsItemModel(
       title: 'Edit Profile', widget: NBEditProfileScreen()));
+  settingList.add(
+      NBSettingsItemModel(title: 'Change Password', widget: NBSettingScreen()));
   settingList.add(NBSettingsItemModel(
-      title: 'Change Password', widget: NBChangePasswordScreen()));
-  settingList.add(NBSettingsItemModel(
-      title: 'Notification Setting', widget: NBNotificationSettingScreen()));
+      title: 'Notification Setting', widget: NBSettingScreen()));
   settingList.add(NBSettingsItemModel(title: 'Help and Support'));
   settingList.add(NBSettingsItemModel(title: 'Terms and Conditions'));
   return settingList;
@@ -160,7 +151,7 @@ List<NBNotificationItemModel> nbGetNotificationItems() {
   notificationList.add(NBNotificationItemModel('App Notification', true));
   notificationList.add(NBNotificationItemModel('Recommended Article', true));
   notificationList.add(NBNotificationItemModel('Promotion', false));
-  notificationList.add(NBNotificationItemModel('Latest News', true));
+  notificationList.add(NBNotificationItemModel('List Guide', true));
   return notificationList;
 }
 

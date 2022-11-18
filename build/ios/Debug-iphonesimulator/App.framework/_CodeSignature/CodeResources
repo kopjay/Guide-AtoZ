@@ -10,7 +10,7 @@
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		L6CNc06VwdRjDi13mrJGt/6CI1I=
+		whUMLpjSvVTysKuTQZ6UL0SDC6E=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
@@ -18,7 +18,7 @@
 		</data>
 		<key>flutter_assets/NOTICES.Z</key>
 		<data>
-		Pgve+8ieMXJcUaPFp257arPlAzo=
+		rOCywxTkRnB9LxL8GGGFD7Bq/fc=
 		</data>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
@@ -28,9 +28,21 @@
 		<data>
 		3y++sUAKzaCQmjLBz2v0kvESHgc=
 		</data>
+		<key>flutter_assets/images/guide_logo.jpg</key>
+		<data>
+		Zq6oysKv3mYyQdikh7aPZEauFss=
+		</data>
+		<key>flutter_assets/images/guide_logo.png</key>
+		<data>
+		CnStnohQrk9PQn9tgal7J0F31EE=
+		</data>
 		<key>flutter_assets/images/ic_theme.png</key>
 		<data>
 		qi6WEGvtb0VnMSFKJaFRjt4hDBU=
+		</data>
+		<key>flutter_assets/images/lombok.jpeg</key>
+		<data>
+		lWWlD5/W2yybubLkKP7YGYXmT8I=
 		</data>
 		<key>flutter_assets/images/nb_chineseFlag.png</key>
 		<data>
@@ -104,6 +116,10 @@
 		<data>
 		al1+Q4r8dag2lsTkBLZSomBhhFY=
 		</data>
+		<key>flutter_assets/images/raja-ampat.jpeg</key>
+		<data>
+		OdDWWmaqpQc5oYo0FgeT309dyos=
+		</data>
 		<key>flutter_assets/images/travel-alone.jpg</key>
 		<data>
 		dQhuGUs0NTTSw2sScpadLhtl1qI=
@@ -114,11 +130,11 @@
 		</data>
 		<key>flutter_assets/isolate_snapshot_data</key>
 		<data>
-		+udtKIRyAcIS6rTHnYkqPRthPjk=
+		9eNtWCqZBPKn/jN2myJwzQYoFMk=
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		0uUhCHQPNZhDKB44v6ZO3uaAD/A=
+		iYsEGfsi6KRNRgaMZII6buVGHSM=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -215,7 +231,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			X3ComZ1rXY7vP/KGelLPBhC2RM2LfEwKreq8/Lh6OzQ=
+			gzAjOk17s/4dvFY3A+/5U8Czz39KFfIDyEIrlmG++DU=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
@@ -229,7 +245,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nUkgV3frw+qwYR744oPsCNNHR0+JcyblnXGuow9c85I=
+			+WEDyTpR5lPzAu/v7yL+lBbDu2BFMZSN75ijmS6w08E=
 			</data>
 		</dict>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
@@ -239,11 +255,32 @@
 			BugRRJlkJdABYrpi+ZDcvZjsh+EPQ4Uf2ST65b83vlc=
 			</data>
 		</dict>
+		<key>flutter_assets/images/guide_logo.jpg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			nc/ryyNuXAabk8C1bvF4Dp4hyX2OO7KuWnzq1Ae+00A=
+			</data>
+		</dict>
+		<key>flutter_assets/images/guide_logo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2a0pe/yLI67AcmyYQB3VLw9vCO5IsnLyC6HB4CfSAQ0=
+			</data>
+		</dict>
 		<key>flutter_assets/images/ic_theme.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			tw5BKiTKai+5tO4PnPjAVrGRT2QuI18l7A9sNRKJnw0=
+			</data>
+		</dict>
+		<key>flutter_assets/images/lombok.jpeg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			k3QYTE9PCO5FMBGetTLNy5e714VckDxxfsdZbqgKzyU=
 			</data>
 		</dict>
 		<key>flutter_assets/images/nb_chineseFlag.png</key>
@@ -372,6 +409,13 @@
 			FIJdTpS1bp/iWrL7/QdwcenVdNkZ92sqqqlXKPJffpQ=
 			</data>
 		</dict>
+		<key>flutter_assets/images/raja-ampat.jpeg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			P7Bn85zuEoV4n43mRqkwCeq7U9Hk4HpQLPv49oDIkXI=
+			</data>
+		</dict>
 		<key>flutter_assets/images/travel-alone.jpg</key>
 		<dict>
 			<key>hash2</key>
@@ -390,14 +434,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			eSIT6ez3qoVubFYyO1nZwI2rBt+8+ysx4WZAsR28p80=
+			DZWrzXugCmT3lP9BiZeEAyWKTGQC9NVtCJQakLOdYDc=
 			</data>
 		</dict>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kz2n46wZf6rmC8YOcGQd4EdxYu3ncrm+k4Wrt/icHEI=
+			96ps8jfvNGeQtQSmLul0ciO/xyxcdPz8SreH8gTU22s=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>

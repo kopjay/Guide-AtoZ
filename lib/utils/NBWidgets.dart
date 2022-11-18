@@ -5,7 +5,9 @@ import 'package:newsblog_prokit/main.dart';
 import 'package:newsblog_prokit/utils/NBColors.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-Widget nbAppTextFieldWidget(TextEditingController controller, String hintText, TextFieldType textFieldType, {FocusNode? focus, FocusNode? nextFocus}) {
+Widget nbAppTextFieldWidget(TextEditingController controller, String hintText,
+    TextFieldType textFieldType,
+    {FocusNode? focus, FocusNode? nextFocus}) {
   return AppTextField(
     controller: controller,
     textFieldType: textFieldType,
@@ -19,7 +21,8 @@ Widget nbAppTextFieldWidget(TextEditingController controller, String hintText, T
       fillColor: grey.withOpacity(0.1),
       hintText: hintText,
       hintStyle: secondaryTextStyle(),
-      border: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide.none),
+      border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16), borderSide: BorderSide.none),
     ),
   );
 }
@@ -37,7 +40,8 @@ Widget nbAppButtonWidget(BuildContext context, String text, Function onTap) {
 AppBar nbAppBarWidget(BuildContext context, {String? title}) {
   return AppBar(
     leading: IconButton(
-      icon: Icon(Icons.arrow_back, color: appStore.isDarkModeOn ? white : black),
+      icon:
+          Icon(Icons.arrow_back, color: appStore.isDarkModeOn ? white : black),
       onPressed: () {
         finish(context);
       },
@@ -48,20 +52,23 @@ AppBar nbAppBarWidget(BuildContext context, {String? title}) {
   );
 }
 
-InputDecoration nbInputDecoration(BuildContext context, {String? hintText, Widget? prefixIcon}) {
+InputDecoration nbInputDecoration(BuildContext context,
+    {String? hintText, Widget? prefixIcon}) {
   return InputDecoration(
     contentPadding: EdgeInsets.only(left: 16, right: 16, top: 8, bottom: 8),
     filled: true,
     fillColor: grey.withOpacity(0.1),
     hintText: hintText,
     hintStyle: secondaryTextStyle(),
-    border: OutlineInputBorder(borderRadius: BorderRadius.circular(16), borderSide: BorderSide.none),
+    border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(16), borderSide: BorderSide.none),
     prefixIcon: prefixIcon,
   );
 }
 
 Future<void> launchURL(String url, {bool forceWebView = false}) async {
-  await launch(url, enableJavaScript: true, forceWebView: forceWebView).catchError(
+  await launch(url, enableJavaScript: true, forceWebView: forceWebView)
+      .catchError(
     (e) {
       throw '$url is not valid';
     },
@@ -79,7 +86,12 @@ Widget commonCachedNetworkImage(
   Color? color,
 }) {
   if (url!.validate().isEmpty) {
-    return placeHolderWidget(height: height, width: width, fit: fit, alignment: alignment, radius: radius);
+    return placeHolderWidget(
+        height: height,
+        width: width,
+        fit: fit,
+        alignment: alignment,
+        radius: radius);
   } else if (url.validate().startsWith('http')) {
     return CachedNetworkImage(
       imageUrl: url,
@@ -89,18 +101,43 @@ Widget commonCachedNetworkImage(
       color: color,
       alignment: alignment as Alignment? ?? Alignment.center,
       errorWidget: (_, s, d) {
-        return placeHolderWidget(height: height, width: width, fit: fit, alignment: alignment, radius: radius);
+        return placeHolderWidget(
+            height: height,
+            width: width,
+            fit: fit,
+            alignment: alignment,
+            radius: radius);
       },
       placeholder: (_, s) {
         if (!usePlaceholderIfUrlEmpty) return SizedBox();
-        return placeHolderWidget(height: height, width: width, fit: fit, alignment: alignment, radius: radius);
+        return placeHolderWidget(
+            height: height,
+            width: width,
+            fit: fit,
+            alignment: alignment,
+            radius: radius);
       },
     );
   } else {
-    return Image.asset(url, height: height, width: width, fit: fit, alignment: alignment ?? Alignment.center).cornerRadiusWithClipRRect(radius ?? defaultRadius);
+    return Image.asset(url,
+            height: height,
+            width: width,
+            fit: fit,
+            alignment: alignment ?? Alignment.center)
+        .cornerRadiusWithClipRRect(radius ?? defaultRadius);
   }
 }
 
-Widget placeHolderWidget({double? height, double? width, BoxFit? fit, AlignmentGeometry? alignment, double? radius}) {
-  return Image.asset('images/placeholder.jpg', height: height, width: width, fit: fit ?? BoxFit.cover, alignment: alignment ?? Alignment.center).cornerRadiusWithClipRRect(radius ?? defaultRadius);
+Widget placeHolderWidget(
+    {double? height,
+    double? width,
+    BoxFit? fit,
+    AlignmentGeometry? alignment,
+    double? radius}) {
+  return Image.asset('images/placeholder.jpg',
+          height: height,
+          width: width,
+          fit: fit ?? BoxFit.cover,
+          alignment: alignment ?? Alignment.center)
+      .cornerRadiusWithClipRRect(radius ?? defaultRadius);
 }

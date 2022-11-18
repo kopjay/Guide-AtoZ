@@ -32,7 +32,7 @@ class NBShowMoreNewsScreenState extends State<NBShowMoreNewsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: nbAppBarWidget(context, title: 'Latest News'),
+      appBar: nbAppBarWidget(context, title: 'List Guide'),
       body: NBNewsComponent(list: newsList),
     );
   }

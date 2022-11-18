@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:nb_utils/nb_utils.dart';
+import 'package:newsblog_prokit/screen/NBHomeScreen.dart';
 import 'package:newsblog_prokit/screen/NBSplashScreen.dart';
 import 'package:newsblog_prokit/store/AppStore.dart';
 import 'package:newsblog_prokit/utils/AppTheme.dart';
@@ -30,8 +31,10 @@ class MyApp extends StatelessWidget {
       builder: (_) => MaterialApp(
         debugShowCheckedModeBanner: false,
         title: '${'News Blog'}${!isMobile ? ' ${platformName()}' : ''}',
-        home: NBSplashScreen(),
-        theme: !appStore.isDarkModeOn ? AppThemeData.lightTheme : AppThemeData.darkTheme,
+        home: NBHomeScreen(),
+        theme: !appStore.isDarkModeOn
+            ? AppThemeData.lightTheme
+            : AppThemeData.darkTheme,
         navigatorKey: navigatorKey,
         scrollBehavior: SBehavior(),
         supportedLocales: LanguageDataModel.languageLocales(),

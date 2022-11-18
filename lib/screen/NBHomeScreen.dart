@@ -4,7 +4,7 @@ import 'package:newsblog_prokit/component/NBAllNewsComponent.dart';
 import 'package:newsblog_prokit/component/NBNewsComponent.dart';
 import 'package:newsblog_prokit/main.dart';
 import 'package:newsblog_prokit/model/NBModel.dart';
-import 'package:newsblog_prokit/screen/NBProfileScreen.dart';
+import 'package:newsblog_prokit/screen/NBSQuizRecord.dart';
 import 'package:newsblog_prokit/utils/NBColors.dart';
 import 'package:newsblog_prokit/utils/NBDataProviders.dart';
 import 'package:newsblog_prokit/utils/NBImages.dart';
@@ -68,12 +68,6 @@ class NBHomeScreenState extends State<NBHomeScreen>
     return Scaffold(
       key: _scaffoldKey,
       appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.menu, color: appStore.isDarkModeOn ? white : black),
-          onPressed: () {
-            _scaffoldKey.currentState!.openDrawer();
-          },
-        ),
         title: Text('GUIDE AtoZ', style: boldTextStyle(size: 20)),
         backgroundColor: context.cardColor,
         centerTitle: true,
@@ -96,61 +90,94 @@ class NBHomeScreenState extends State<NBHomeScreen>
           indicatorSize: TabBarIndicatorSize.tab,
         ),
       ),
-      drawer: Drawer(
-        elevation: 0,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              height: 130,
-              child: DrawerHeader(
-                margin: EdgeInsets.all(0),
-                child: ListTile(
-                  contentPadding: EdgeInsets.only(left: 0),
-                  leading: CircleAvatar(
-                      backgroundImage: AssetImage(NBProfileImage), radius: 30),
-                  title: Text('Robert Fox', style: boldTextStyle()),
-                  subtitle: Text('View Profile', style: secondaryTextStyle()),
-                  onTap: () {
-                    finish(context);
-                    NBProfileScreen().launch(context);
-                  },
-                ),
-              ),
-            ),
-            ListView.separated(
-              padding: EdgeInsets.all(8),
-              separatorBuilder: (_, index) {
-                return Divider();
-              },
-              itemCount: mDrawerList.length,
-              itemBuilder: (_, index) {
-                return Text('${mDrawerList[index].title}',
-                        style: boldTextStyle())
-                    .onTap(
-                  () {
-                    if (index == 0) {
-                      finish(context);
-                    } else {
-                      finish(context);
-                      mDrawerList[index].widget.launch(context);
-                    }
-                  },
-                ).paddingAll(8);
-              },
-            ).expand()
-          ],
-        ),
-      ),
       body: TabBarView(
         controller: tabController,
         children: [
           NBAllNewsComponent(),
-          NBNewsComponent(list: mTechNewsList),
+          QuizCard(),
           // NBNewsComponent(list: mFashionNewsList),
           // NBNewsComponent(list: mFashionNewsList),
           // NBNewsComponent(list: mSportsNewsList),
           // NBNewsComponent(list: mScienceNewsList),
+        ],
+      ),
+    );
+  }
+}
+
+class QuizCard extends StatelessWidget {
+  const QuizCard({super.key});
+
+  final String question1 =
+      'Said to be the oldest city in the Netherlands, Nijmegen “makes you think you’ve gone back to Roman times”, proclaimed the local tourist office and they aren’t wrong.';
+  final String question2 =
+      'If you want to dive deep into the region’s history, stop at Museum De Bastei. And if you are a keen walker, consider taking part in the glorious ';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          Container(
+            child: Card(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  const ListTile(
+                    leading: Icon(Icons.album),
+                    title: Text('Quiz 1'),
+                    subtitle: Text('Quiz 1 is training to speech'),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
+                      const SizedBox(width: 8),
+                      ElevatedButton(
+                        child: const Text('Start'),
+                        onPressed: () {
+                          NBSQuizRecord(question1).launch(context);
+                        },
+                        style: ElevatedButton.styleFrom(
+                          primary: NBPrimaryColor,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Container(
+            child: Card(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  const ListTile(
+                    leading: Icon(Icons.album),
+                    title: Text('Quiz 2'),
+                    subtitle: Text('Quiz 2 is training to speech 2'),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
+                      const SizedBox(width: 8),
+                      ElevatedButton(
+                        child: const Text('Start'),
+                        onPressed: () {
+                          NBSQuizRecord(question2).launch(context);
+                        },
+                        style: ElevatedButton.styleFrom(
+                          primary: NBPrimaryColor,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );

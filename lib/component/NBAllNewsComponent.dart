@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:newsblog_prokit/model/NBModel.dart';
 import 'package:newsblog_prokit/component/NBNewsComponent.dart';
+import 'package:newsblog_prokit/component/NBNewsImagesComponent.dart';
 import 'package:newsblog_prokit/screen/NBShowMoreNewsScreen.dart';
 import 'package:newsblog_prokit/utils/NBColors.dart';
 import 'package:newsblog_prokit/utils/NBDataProviders.dart';
@@ -48,31 +49,7 @@ class NBAllNewsComponentState extends State<NBAllNewsComponent> {
       child: Column(
         children: [
           16.height,
-          Container(
-            height: 200,
-            child: PageView(
-              controller: pageController,
-              children: List.generate(
-                mBannerItems.length,
-                (index) {
-                  return commonCachedNetworkImage(
-                    mBannerItems[index].image!,
-                    fit: BoxFit.fill,
-                  )
-                      .cornerRadiusWithClipRRect(16)
-                      .paddingRight(pageIndex < 2 ? 16 : 0);
-                },
-              ),
-              onPageChanged: (value) {},
-            ),
-          ),
-          8.height,
-          DotIndicator(
-            pageController: pageController!,
-            pages: mBannerItems,
-            indicatorColor: NBPrimaryColor,
-            unselectedIndicatorColor: gray,
-          ),
+          NBNewsImagesComponent(list: mNewsList),
           16.height,
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

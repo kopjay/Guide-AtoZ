@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:newsblog_prokit/model/NBModel.dart';
-import 'package:newsblog_prokit/screen/NBAudioNewsDetailsScreen.dart';
+// import 'package:newsblog_prokit/screen/NBAudioNewsDetailsScreen.dart';
 import 'package:newsblog_prokit/utils/NBColors.dart';
 import 'package:newsblog_prokit/utils/NBWidgets.dart';
 
@@ -48,11 +48,15 @@ class NBAudioNewsComponentState extends State<NBAudioNewsComponent> {
               Stack(
                 alignment: AlignmentDirectional.bottomCenter,
                 children: [
-                  commonCachedNetworkImage('${mData.image}', height: 100, fit: BoxFit.fill).cornerRadiusWithClipRRect(16),
+                  commonCachedNetworkImage('${mData.image}',
+                          height: 100, fit: BoxFit.fill)
+                      .cornerRadiusWithClipRRect(16),
                   Container(
                     padding: EdgeInsets.only(left: 8, right: 8),
-                    decoration: boxDecorationWithRoundedCorners(backgroundColor: black.withOpacity(0.2)),
-                    child: Text('${mData.time}', style: primaryTextStyle(color: white, size: 14)),
+                    decoration: boxDecorationWithRoundedCorners(
+                        backgroundColor: black.withOpacity(0.2)),
+                    child: Text('${mData.time}',
+                        style: primaryTextStyle(color: white, size: 14)),
                   ),
                 ],
               ).expand(flex: 1),
@@ -60,8 +64,10 @@ class NBAudioNewsComponentState extends State<NBAudioNewsComponent> {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('${mData.categoryName}', style: boldTextStyle(color: NBPrimaryColor)),
-                  Text('${mData.title}', style: boldTextStyle(), softWrap: true, maxLines: 3),
+                  Text('${mData.categoryName}',
+                      style: boldTextStyle(color: NBPrimaryColor)),
+                  Text('${mData.title}',
+                      style: boldTextStyle(), softWrap: true, maxLines: 3),
                   8.height,
                   Text('${mData.date}', style: secondaryTextStyle()),
                 ],
@@ -70,7 +76,7 @@ class NBAudioNewsComponentState extends State<NBAudioNewsComponent> {
           ),
         ).onTap(
           () {
-            NBAudioNewsDetailsScreen(audioDetails: mData).launch(context);
+            // NBAudioNewsDetailsScreen(audioDetails: mData).launch(context);
           },
         );
       },

@@ -1,4 +1,4 @@
-const NBSplashImage = 'images/nb_splash_image.png';
+const NBSplashImage = 'images/guide_logo.png';
 const NBWalkThroughImage1 =
     'https://assets.iqonic.design/old-themeforest-images/prokit/images/newsBlog/nb_walk1.jpg';
 const NBWalkThroughImage2 =

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nb_utils/nb_utils.dart';
 import 'package:newsblog_prokit/model/NBModel.dart';
 import 'package:newsblog_prokit/screen/NBNewsDetailsScreen.dart';
+import 'package:newsblog_prokit/screen/NBSQuizRecord.dart';
 import 'package:newsblog_prokit/utils/NBColors.dart';
 import 'package:newsblog_prokit/utils/NBWidgets.dart';
 
@@ -44,18 +45,24 @@ class NBNewsComponentState extends State<NBNewsComponent> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('${mData.categoryName}', style: boldTextStyle(color: NBPrimaryColor)),
-                Text('${mData.title}', style: boldTextStyle(), softWrap: true, maxLines: 3),
+                Text('${mData.categoryName}',
+                    style: boldTextStyle(color: NBPrimaryColor)),
+                Text('${mData.title}',
+                    style: boldTextStyle(), softWrap: true, maxLines: 3),
                 8.height,
                 Text('${mData.date}', style: secondaryTextStyle()),
               ],
             ).expand(flex: 2),
             4.width,
-            commonCachedNetworkImage('${mData.image}', height: 100, fit: BoxFit.fill).cornerRadiusWithClipRRect(16).expand(flex: 1),
+            commonCachedNetworkImage('${mData.image}',
+                    height: 100, fit: BoxFit.fill)
+                .cornerRadiusWithClipRRect(16)
+                .expand(flex: 1),
           ],
         ).onTap(
           () {
             NBNewsDetailsScreen(newsDetails: mData).launch(context);
+            // NBSQuizRecord().launch(context);
           },
         );
       },

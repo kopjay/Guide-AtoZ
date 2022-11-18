@@ -26,7 +26,7 @@ class NBEditProfileScreenState extends State<NBEditProfileScreen> {
   bool loadFromFile = false;
 
   Future getImage(ImageSource source) async {
-    var image = await ImagePicker().getImage(source: source);
+    var image = await ImagePicker().pickImage(source: source);
     setState(
       () {
         if (image != null) {
@@ -62,8 +62,12 @@ class NBEditProfileScreenState extends State<NBEditProfileScreen> {
             Align(
               alignment: Alignment.center,
               child: loadFromFile
-                  ? Image.file(imageFile, fit: BoxFit.cover, width: 100, height: 100).cornerRadiusWithClipRRect(50)
-                  : Image.asset(NBProfileImage, fit: BoxFit.cover, width: 100, height: 100).cornerRadiusWithClipRRect(50),
+                  ? Image.file(imageFile,
+                          fit: BoxFit.cover, width: 100, height: 100)
+                      .cornerRadiusWithClipRRect(50)
+                  : Image.asset(NBProfileImage,
+                          fit: BoxFit.cover, width: 100, height: 100)
+                      .cornerRadiusWithClipRRect(50),
             ).onTap(
               () {
                 getImage(ImageSource.gallery);
@@ -83,9 +87,12 @@ class NBEditProfileScreenState extends State<NBEditProfileScreen> {
               nextFocus: emailFocus,
             ),
             16.height,
-            nbAppTextFieldWidget(emailCont, 'Change Email', TextFieldType.EMAIL, focus: emailFocus, nextFocus: passwordFocus),
+            nbAppTextFieldWidget(emailCont, 'Change Email', TextFieldType.EMAIL,
+                focus: emailFocus, nextFocus: passwordFocus),
             16.height,
-            nbAppTextFieldWidget(passwordCont, 'Change Password', TextFieldType.PASSWORD, focus: passwordFocus),
+            nbAppTextFieldWidget(
+                passwordCont, 'Change Password', TextFieldType.PASSWORD,
+                focus: passwordFocus),
             16.height,
             nbAppButtonWidget(
               context,
